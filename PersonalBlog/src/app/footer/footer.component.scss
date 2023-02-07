@@ -1,0 +1,45 @@
+.container-fluid {
+  width: 100%;
+  text-align: center;
+  background-color: #161E2A;
+  color: white;
+  padding-top: 20px;
+}
+
+a {
+  font-size: 15px;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 13px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+ul.list-inline li {
+  display: inline;
+  margin: 0 10px;
+}
