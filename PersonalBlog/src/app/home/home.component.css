@@ -1,0 +1,32 @@
+.container-fluid {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.sector1 {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0;
+  height: 500px;
+}
+
+#trapezium1 {
+  border-top: 500px solid darkblue;
+  border-left: 0 solid transparent;
+  border-right: 150px solid transparent;
+  height: 0;
+  width: 55%;
+  position: absolute;
+}
+
+#trapezium2 {
+  border-bottom: 500px solid orangered;
+  border-left: 150px solid transparent;
+  border-right: 0 solid transparent;
+  height: 0;
+  width: 55%;
+  position: absolute;
+  left: 45%;
+}

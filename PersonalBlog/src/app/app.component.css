@@ -6,10 +6,12 @@ app-header {
   height: 100px;
 }
 
-.row {
+router-outlet {
   width: 100%;
   overflow: hidden;
   padding: 20px 0 50px 0;
+  vertical-align: middle;
+  margin: 0;
 }
 
 /* Cách check overflow*/
