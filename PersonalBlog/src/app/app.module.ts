@@ -19,10 +19,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatInputModule} from '@angular/material/input';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {AboutComponent} from './about/about.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {DocumentComponent} from './document/document.component';
+import {LibraryComponent} from './library/library.component';
+import {PodcastComponent} from './podcast/podcast.component';
+import { BlogComponent } from './blog/blog.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LibraryComponent,
+    PodcastComponent,
+    DocumentComponent,
+    BlogComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
