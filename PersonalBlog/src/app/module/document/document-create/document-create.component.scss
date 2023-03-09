@@ -1,0 +1,25 @@
+.container {
+  //background-image: url('https://i.pinimg.com/564x/42/8a/86/428a86df9d16bf675024c2a6a1d03ec9.jpg');
+  //background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.col-5{
+  padding: 0;
+  margin: 0;
+}
+
+.col-5 img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+* {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+

@@ -3,6 +3,8 @@ export interface Documents {
   documentName: string;
   documentWriter: string;
   description: string;
+  documentPoster: string;
+  documentDate: string;
   deleteFlag: number;
 
 }

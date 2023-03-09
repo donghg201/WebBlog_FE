@@ -23,11 +23,12 @@ import {HeaderComponent} from './module/header/header.component';
 import {FooterComponent} from './module/footer/footer.component';
 import {AboutComponent} from './module/about/about.component';
 import {PageNotFoundComponent} from './module/page-not-found/page-not-found.component';
-import {DocumentComponent} from './module/document/document.component';
 import {LibraryComponent} from './module/library/library.component';
 import {PodcastComponent} from './module/podcast/podcast.component';
-import { BlogComponent } from './module/blog/blog.component';
-import { SidebarComponent } from './module/sidebar/sidebar.component';
+import {BlogComponent} from './module/blog/blog.component';
+import {SidebarComponent} from './module/sidebar/sidebar.component';
+import {LoadingComponent} from './module/loading/loading.component';
+import {DocumentModule} from "./module/document/document.module";
 
 @NgModule({
   declarations: [
@@ -39,9 +40,9 @@ import { SidebarComponent } from './module/sidebar/sidebar.component';
     PageNotFoundComponent,
     LibraryComponent,
     PodcastComponent,
-    DocumentComponent,
     BlogComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,7 +62,8 @@ import { SidebarComponent } from './module/sidebar/sidebar.component';
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
-    HttpClientModule
+    HttpClientModule,
+    DocumentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
