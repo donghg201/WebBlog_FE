@@ -10,6 +10,46 @@
 //  visibility: visible !important;
 //}
 
+.turn-back {
+  position: absolute;
+  right: 20px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+button {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: 1px solid;
+  background: #fff;
+  font-size: 15px;
+}
+
+button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+button:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 body {
@@ -20,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px;
+  padding: 70px 48px 48px 48px;
   background-color: #f8f8f8;
 }
 
@@ -30,7 +70,7 @@ h1 {
   color: #161E2A;
 }
 
-p{
+p {
   margin-bottom: 20px;
   font-size: 15px;
   color: #161E2A;
@@ -144,7 +184,7 @@ p{
 }
 
 .formbold-btn:hover {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
 
 .buttons {
