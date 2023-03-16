@@ -10,45 +10,54 @@
 //  visibility: visible !important;
 //}
 
-.turn-back {
-  position: absolute;
-  right: 20px;
+//-----Button trở về-----
+
+.button-turn-back {
   text-align: right;
   margin-top: 20px;
 }
 
-button {
-  display: flex;
-  height: 3em;
-  width: 100px;
-  align-items: center;
-  justify-content: center;
-  background-color: #eeeeee4b;
-  border-radius: 3px;
-  letter-spacing: 1px;
-  transition: all 0.2s linear;
-  cursor: pointer;
+.turn-back {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
   border: 1px solid;
-  background: #fff;
+  color: black;
+  text-align: center;
   font-size: 15px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-button > svg {
-  margin-right: 5px;
-  margin-left: 5px;
-  font-size: 20px;
-  transition: all 0.4s ease-in;
+.turn-back span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-button:hover > svg {
-  font-size: 1.2em;
-  transform: translateX(-5px);
+.turn-back span:after {
+  content: '«';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -15px;
+  transition: 0.5s;
 }
 
-button:hover {
-  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
-  transform: translateY(-2px);
+.turn-back:hover span {
+  padding-left: 15px;
 }
+
+.turn-back:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+//-----Button trở về-----
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -60,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px 48px 48px 48px;
+  padding: 20px 48px 48px 48px;
   background-color: #f8f8f8;
 }
 

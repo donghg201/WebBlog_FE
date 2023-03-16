@@ -8,6 +8,8 @@
   font-family: "Poppins", sans-serif;
 }
 
+//-----Button đi tới-----
+
 .button-create-document {
   text-align: right;
   margin-top: 20px;
@@ -18,11 +20,9 @@
   border-radius: 4px;
   background-color: white;
   border: 1px solid;
-  //color: #FFFFFF;
   color: black;
   text-align: center;
-  font-size: 17px;
-  font-weight: 550;
+  font-size: 15px;
   padding: 16px;
   width: 130px;
   transition: all 0.5s;
@@ -54,6 +54,8 @@
   opacity: 1;
   right: 0;
 }
+
+//-----Button đi tới-----
 
 .col-8 .row {
   margin: 15px 0 50px 0;
