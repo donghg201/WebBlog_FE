@@ -3,12 +3,12 @@
     <div class="col-7">
       <div class="button-turn-back">
         <button class="turn-back" routerLink="/document">
-          <span > Trở về </span>
+          <span> Trở về </span>
         </button>
       </div>
       <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
-          <form action="x" method="POST">
+          <form [formGroup]="formCreateDocument">
             <div class="formbold-form-title">
               <h1 class="">Tạo mới chia sẻ</h1>
               <p>Kiến thức là vô hạn. Chia sẻ để mọi người biết thêm về những kinh nghiệm của bạn!</p>
@@ -16,24 +16,27 @@
             <div class="formbold-input-flex">
               <div>
                 <label for="title" class="formbold-form-label"> Tiêu đề </label>
-                <input type="text" name="title" id="title" class="formbold-form-input" placeholder="Nhập tiêu đề"/>
+                <input type="text" name="title" id="title" class="formbold-form-input" formControlName="documentName"
+                       placeholder="Nhập tiêu đề"/>
               </div>
               <div>
                 <label for="writer" class="formbold-form-label"> Người chia sẻ </label>
                 <input type="text" name="writer" id="writer" class="formbold-form-input"
+                       formControlName="documentWriter"
                        placeholder="Nhập người chia sẻ"/>
               </div>
             </div>
             <div class="formbold-mb-3"><label for="message" class="formbold-form-label">
               Nội dung chia sẻ</label>
               <textarea rows="6" name="message" id="message" placeholder="Nhập nội dung chia sẻ ở đây..."
-                        class="formbold-form-input"></textarea>
+                        class="formbold-form-input" formControlName="description"></textarea>
             </div>
             <!--Đính kèm ảnh-->
             <div class="formbold-input-file">
               <div class="formbold-filename-wrapper">
+                <img [src]="url" title="Picture" height="100px" width="100px">
               </div>
-              <label for="upload" class="formbold-input-label">
+              <label for="img" class="formbold-input-label">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_1670_1531)">
                     <path
@@ -46,13 +49,14 @@
                     </clipPath>
                   </defs>
                 </svg>
-                Attach files
-                <input type="file" name="upload" id="upload">
+                Đính kèm ảnh
+                <input type="file" name="img" id="img" accept="image/*" (change)="onSelect($event)"
+                       formControlName="documentPoster">
               </label>
             </div>
             <!--Button-->
             <div class="buttons">
-              <button class="btn"><span></span>
+              <button class="btn" type="submit" (click)="submit(formCreateDocument)"><span></span>
                 <p data-start="good luck!" data-text="Cám ơn bạn ^_^" data-title="Chia sẻ nào!"></p></button>
             </div>
           </form>

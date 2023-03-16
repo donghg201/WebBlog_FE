@@ -4,6 +4,7 @@ import {DocumentComponent} from "./document.component";
 import {CommonModule} from "@angular/common";
 import {DocumentRoutingModule} from "./document-routing.module";
 import { DocumentListComponent } from './document-list/document-list.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -11,10 +12,11 @@ import { DocumentListComponent } from './document-list/document-list.component';
     DocumentCreateComponent,
     DocumentListComponent
   ],
-  imports: [
-    CommonModule,
-    DocumentRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        DocumentRoutingModule,
+        ReactiveFormsModule
+    ]
 })
 
 export class DocumentModule {
