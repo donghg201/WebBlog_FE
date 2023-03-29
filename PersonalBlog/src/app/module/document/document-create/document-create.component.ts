@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {DocumentService} from "../../../service/document.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
+import {Documents} from "../../../entity/Documents";
+import {DocumentService} from "../../../service/document/document.service";
 
 @Component({
   selector: 'app-document-create',
@@ -11,13 +13,15 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class DocumentCreateComponent implements OnInit {
 
-  url = 'https://8thstreetgrille.com/wp-content/uploads/2021/04/macd-la-gi.jpeg';
+  public formCreateDocument!: FormGroup;
 
-  formCreateDocument!: FormGroup;
+  document: Documents | undefined;
 
   constructor(private activeRouter: ActivatedRoute, private documentService: DocumentService,
-              private formBuilder: FormBuilder, private router: Router,
-              public toastrService: ToastrService) {
+              private formBuilder: FormBuilder,
+              private router: Router,
+              public toastrService: ToastrService,
+              public http: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -29,29 +33,15 @@ export class DocumentCreateComponent implements OnInit {
     })
   }
 
-  submit(formCreateDocument: FormGroup) {
+
+  submitForm() {
+    console.log(this.document?.documentPoster)
     this.documentService.addDocument(this.formCreateDocument.value).subscribe(data => {
-        this.toastrService.success('Chia sẻ mới thành công!', 'Thông báo!', {timeOut: 2000, extendedTimeOut: 1500}),
-          this.router.navigateByUrl('/document')
-      },
-      error => {
-        this.toastrService.error('Có lỗi xảy ra', 'Thông báo!', {timeOut: 5000, extendedTimeOut: 1500})
-      })
+      this.toastrService.success('Chia sẻ mới thành công!', 'Thông báo', {timeOut: 2000, extendedTimeOut: 1500})
+      this.router.navigateByUrl('/document');
+      console.log(this.formCreateDocument.value);
+    }, error => {
+      this.toastrService.error('Chia sẻ mới không thành công!', 'Thông báo', {timeOut: 5000, extendedTimeOut: 1500})
+    })
   }
-
-  onSelect(event: any) {
-    let fileType = event.target.files[0].type;
-    if (fileType.match(/image\/*/)) {
-      let reader = new FileReader();
-      reader.readAsDataURL(event.target.files[0]);
-      reader.onload = (event: any) => {
-        this.url = event.target.result;
-        console.log(this.url);
-      };
-    } else {
-      window.alert('Please select correct image format');
-    }
-  }
-
-
 }

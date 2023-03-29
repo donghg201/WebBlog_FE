@@ -3,8 +3,9 @@ import {DocumentCreateComponent} from "./document-create/document-create.compone
 import {DocumentComponent} from "./document.component";
 import {CommonModule} from "@angular/common";
 import {DocumentRoutingModule} from "./document-routing.module";
-import { DocumentListComponent } from './document-list/document-list.component';
+import {DocumentListComponent} from './document-list/document-list.component';
 import {ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -12,11 +13,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     DocumentCreateComponent,
     DocumentListComponent
   ],
-    imports: [
-        CommonModule,
-        DocumentRoutingModule,
-        ReactiveFormsModule
-    ]
+  imports: [
+    CommonModule,
+    DocumentRoutingModule,
+    ReactiveFormsModule
+  ]
 })
 
 export class DocumentModule {

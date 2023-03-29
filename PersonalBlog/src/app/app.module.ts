@@ -28,7 +28,6 @@ import {PodcastComponent} from './module/podcast/podcast.component';
 import {BlogComponent} from './module/blog/blog.component';
 import {SidebarComponent} from './module/sidebar/sidebar.component';
 import {LoadingComponent} from './module/loading/loading.component';
-import {DocumentModule} from "./module/document/document.module";
 import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
@@ -64,7 +63,6 @@ import {ToastrModule} from "ngx-toastr";
     RouterLinkActive,
     RouterOutlet,
     HttpClientModule,
-    DocumentModule,
     ToastrModule.forRoot(
       {
         timeOut: 2000,

@@ -5,11 +5,11 @@
     <div class="col-8">
       <div class="button-create-document">
         <button class="create-document" routerLink="/document/create">
-          <span > Tạo mới </span>
+          <span> Tạo mới </span>
         </button>
       </div>
       <div class="row">
-        <div class="col-4" *ngFor="let doc of documents;">
+        <div class="col-4" *ngFor="let doc of documentList;">
           <div class="profile-card">
             <div class="img">
               <img src="{{doc.documentPoster}}" width="300" height="200">
@@ -19,7 +19,7 @@
               <span class="description">{{doc.description}}</span>
             </div>
             <div class="buttons">
-              <button class="button">Read more</button>
+              <button class="button" routerLink="detail/{{doc.documentName}}">Read more</button>
             </div>
             <div class="author">
               <p>Tác giả: <span>{{doc.documentWriter}}</span></p>
@@ -27,6 +27,15 @@
           </div>
         </div>
       </div>
+      <div class="button-read-more">
+        <button class="learn-more" (click)="loadMore()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+          <span class="button-text"> Xem thêm </span>
+        </button>
+      </div>
+
     </div>
     <div class="col-2"></div>
   </div>

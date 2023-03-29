@@ -1,7 +1,7 @@
+import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Category} from "../entity/Category";
-import {Injectable} from "@angular/core";
+import {Category} from "../../entity/Category";
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +24,3 @@ export class CategoryService {
     return this.httpClient.delete(this.API_CATEGORY_URL + '/delete/' + name)
   }
 }
-
